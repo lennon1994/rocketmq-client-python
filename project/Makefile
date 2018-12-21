@@ -51,8 +51,8 @@ CPPFLAGS := -I$(TOPDIR)/include \
 			$(addprefix -I,$(PYTHON_INCLUDE))
 
 LDFLAGS := -shared -Wl,-soname=librocketmqclientpython.so -pthread -fPIC
-LIBPATH := $(addprefix -L, $(ROCKETMQ_LIBD) $(PYTHON_LIBD))
-LDLIBS := $(addprefix -l,rocketmq boost_python python2.7)
+LIBPATH := $(addprefix -L,$(ROCKETMQ_LIBD) $(PYTHON_LIBD))
+LDLIBS := $(addprefix -l,rocketmq boost_python)
 
 CXX := g++
 AR := ar
